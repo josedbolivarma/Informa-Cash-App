@@ -5,7 +5,12 @@ import { useFetch } from "../../hooks/useFetch";
 
 import { TitleComponent, BreadCrumb, BasicDataTable } from "../../Global";
 
-/* Columns for the Data Table */
+
+
+const ListCategories = () => {
+  const { data, deleteData } = useFetch("categories");
+
+  /* Columns for the Data Table */
 const columns: any[] = [
   {
     Header: "N°",
@@ -30,21 +35,26 @@ const columns: any[] = [
     // Custom cell rendering for the "Accion" column with a link to edit the profile
     Cell: ({ row }: { row: any }) => {
       return (
-        <Link
-          to={`${process.env.PUBLIC_URL}/app/editarcategoria`}
-          state={row.original}
-        >
-          <span className="material-icons md-5 md-dark">&#xe3c9;</span>
-        </Link>
+        <div className='d-flex justify-content-center align-items-center'>
+          <Link
+            to={`${process.env.PUBLIC_URL}/app/editargasto`}
+            state={row.original}
+          >
+            <button className='btn'>
+            <span className="material-icons md-5 md-dark">&#xe3c9;</span>
+            </button>
+          </Link>
+  
+          <button className='btn'
+            onClick={() => deleteData(row.original.id)}
+          >
+            <span className="material-icons md-5 md-dark">&#xe872;</span>
+          </button>
+          </div>
       );
     },
   },
 ];
-
-const ListCategories = () => {
-  //geting data
-  // const [data, setData] = useState<any>([]);
-  const { data } = useFetch("categories");
 
   useEffect(() => {
     console.log(data)
