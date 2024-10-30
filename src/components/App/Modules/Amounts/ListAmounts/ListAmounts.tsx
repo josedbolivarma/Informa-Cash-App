@@ -10,72 +10,74 @@ import { Card, Col, FormLabel } from 'react-bootstrap';
 import { formatPesos } from '../../../../../helpers';
 
 /* Columns for the Data Table */
-const columns: any[] = [
-  {
-    Header: "N°",
-    accessor: "",
-    className: "wd-5p borderrigth",
-    Cell: ({ row }: { row: any }) => {
-      const { index } = row;
-      const consecutiveNumber = index + 1;
-      return <span>{consecutiveNumber}</span>;
-    },
-  },
-  {
-    Header: "Gasto",
-    accessor: "amount",
-    className: "wd-25p borderrigth",
-    Cell: ({ value }: { value: number }) => <span>{value}</span>,
-  },
-  {
-    Header: "Categoria",
-    accessor: "category",
-    className: "wd-25p borderrigth",
-    Cell: ({ value }: { value: string }) => <span>{value.toUpperCase()}</span>,
-  },
-  {
-    Header: "Fecha",
-    accessor: "date",
-    className: "wd-25p borderrigth",
-    Cell: ({ value }: { value: string }) => <span>{value}</span>,
-  },
-  {
-    Header: "Descripción",
-    accessor: "description",
-    className: "wd-25p borderrigth",
-    Cell: ({ value }: { value: string }) => <span>{value}</span>,
-  },
-  {
-    Header: "Acciones",
-    accessor: "",
-    className: "wd-15p borderrigth",
-    // Custom cell rendering for the "Accion" column with a link to edit the profile
-    Cell: ({ row }: { row: any }) => {
-      return (
-        <div className='d-flex justify-content-center align-items-center'>
-        <Link
-          to={`${process.env.PUBLIC_URL}/app/editargasto`}
-          state={row.original}
-        >
-          <button className='btn'>
-          <span className="material-icons md-5 md-dark">&#xe3c9;</span>
-          </button>
-        </Link>
 
-        <button className='btn'
-          onClick={() => console.log(row.original)}
-        >
-          <span className="material-icons md-5 md-dark">&#xe872;</span>
-        </button>
-        </div>
-      )
-    },
-  }
-]
 
 const ListAmounts = () => {
-  const { data } = useFetch();
+  const { data, deleteData } = useFetch();
   const { data: categories } = useFetch("categories");
+
+  const columns: any[] = [
+    {
+      Header: "N°",
+      accessor: "",
+      className: "wd-5p borderrigth",
+      Cell: ({ row }: { row: any }) => {
+        const { index } = row;
+        const consecutiveNumber = index + 1;
+        return <span>{consecutiveNumber}</span>;
+      },
+    },
+    {
+      Header: "Gasto",
+      accessor: "amount",
+      className: "wd-25p borderrigth",
+      Cell: ({ value }: { value: number }) => <span>${formatPesos(value)}</span>,
+    },
+    {
+      Header: "Categoria",
+      accessor: "category",
+      className: "wd-25p borderrigth",
+      Cell: ({ value }: { value: string }) => <span>{value.toUpperCase()}</span>,
+    },
+    {
+      Header: "Fecha",
+      accessor: "date",
+      className: "wd-25p borderrigth",
+      Cell: ({ value }: { value: string }) => <span>{value}</span>,
+    },
+    {
+      Header: "Descripción",
+      accessor: "description",
+      className: "wd-25p borderrigth",
+      Cell: ({ value }: { value: string }) => <span>{value}</span>,
+    },
+    {
+      Header: "Acciones",
+      accessor: "",
+      className: "wd-15p borderrigth",
+      // Custom cell rendering for the "Accion" column with a link to edit the profile
+      Cell: ({ row }: { row: any }) => {
+        return (
+          <div className='d-flex justify-content-center align-items-center'>
+          <Link
+            to={`${process.env.PUBLIC_URL}/app/editargasto`}
+            state={row.original}
+          >
+            <button className='btn'>
+            <span className="material-icons md-5 md-dark">&#xe3c9;</span>
+            </button>
+          </Link>
+  
+          <button className='btn'
+            onClick={() => deleteData(row.original.id)}
+          >
+            <span className="material-icons md-5 md-dark">&#xe872;</span>
+          </button>
+          </div>
+        )
+      },
+    }
+  ]
 
   const [filterData, setFilterData] = useState<any>([]);
   const [selectedCategory, setSelectedCategory] = useState<any>(null);

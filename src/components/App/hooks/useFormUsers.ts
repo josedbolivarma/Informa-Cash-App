@@ -3,7 +3,7 @@ import validator from "validator";
 import { Expense } from "../ui";
 
 const initialState = {
-  amount: "",
+  amount: 0,
   category: "",
   date: "",
   description: "",
@@ -15,8 +15,6 @@ const initialErrors = {
 }
 
 export const useFormAmount = (setAmount: any) => {
-  const [userProfiles, setUserProfiles] = useState<any>([]);
-
   const [isPasswordTouched, setIsPasswordTouched] = useState(false);
   const [errors, setErrors] = useState<any>(initialErrors);
   const [hasErrors, setHasErrors] = useState(true);
@@ -32,11 +30,6 @@ export const useFormAmount = (setAmount: any) => {
     const validationErrors: any = { ...errors };
 
     const { name, value } = e.target;
-    let updatedValue = value;
-
-    if (name === "amount") {
-      updatedValue = value.toLowerCase().replace(/\b\w/g, (char: string) => char.toUpperCase());
-    }
 
     if (e.target.name === "amount" && isPasswordTouched) {
       // Validar el campo de amount (required)
@@ -45,12 +38,10 @@ export const useFormAmount = (setAmount: any) => {
       } else {
         delete validationErrors.amount;
       }
-      setAmount((prev: any) => ({ ...prev, [e.target.name]: e.target.value }));
+      setAmount((prev: any) => ({ ...prev, [e.target.name]: Number(e.target.value) }));
     }
 
-    console.log({name, value});
-
-    if (e.target.name === "category" && isPasswordTouched) {
+    if (e.target.name === "category") {
       // Validar el campo de category (required)
       if (validator.isEmpty(e.target.value)) {
         validationErrors.category = ["La categoria es obligatoria"];
@@ -68,6 +59,8 @@ export const useFormAmount = (setAmount: any) => {
       setAmount((prev: any) => ({ ...prev, [e.target.name]: e.target.value }));
     }
 
+    console.log({value, validationErrors, hasErrors, errors});
+
     // Si hay errores, actualiza el estado con ellos
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -81,14 +74,12 @@ export const useFormAmount = (setAmount: any) => {
   return {
     // Methods
     handleChange,
-    setUserProfiles,
     setIsPasswordTouched,
     resetForm,
     setErrors,
     setHasErrors,
     // Properties
     isPasswordTouched,
-    userProfiles,
     errors,
     hasErrors,
   };

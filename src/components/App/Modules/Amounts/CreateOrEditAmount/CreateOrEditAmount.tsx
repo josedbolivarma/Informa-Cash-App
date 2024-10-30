@@ -5,8 +5,6 @@ import { useLocation, } from "react-router-dom";
 import { useFetch, useFormAmount } from "../../../hooks";
 import { TitleComponent, BreadCrumb, InputErrorMessage } from "../../../Global";
 
-import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { Expense } from "../../../ui";
 
 const initialState: any = {
@@ -44,6 +42,7 @@ const CreateOrEditAmount = () => {
 
   const handleSubmit = (e: any) => {
   e.preventDefault();
+  console.log({data});
   if (data?.id) {
     putData(data?.id, data);
   } else {
@@ -73,7 +72,7 @@ const CreateOrEditAmount = () => {
                     </Form.Label>
                     < InputErrorMessage message={errors.amount} inputFocus={isPasswordTouched} >
                       <Form.Control
-                        type="text"
+                        type="number"
                         className="form-control text-capitalize"
                         placeholder=""
                         name="amount"
@@ -97,12 +96,12 @@ const CreateOrEditAmount = () => {
                                             getOptionLabel={(option: any) => `${option.name} (${data.category})`}
                                             value={categories.find(category => category.name === data?.category) || null}
                                             onChange={(e: any, value: any) => {
-                                              // console.log({value: value.name, data_category: data?.category})
-                                              // handleChange(e);
+                                              if (value) {
+                                                setHasErrors(false);
+                                                delete errors.category;
+                                              }
                                               setData({ ...data, category: value.name });
                                             }}
-                                            // onClose={handleAutocompleteClear}
-                                            // onBlur={handleChange}
                                             renderInput={(params: any) => (
                                                 <InputErrorMessage
                                                     message={
