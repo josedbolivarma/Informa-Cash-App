@@ -37,7 +37,7 @@ const columns: any[] = [
       return (
         <div className='d-flex justify-content-center align-items-center'>
           <Link
-            to={`${process.env.PUBLIC_URL}/app/editargasto`}
+            to={`${process.env.PUBLIC_URL}/app/editarcategoria`}
             state={row.original}
           >
             <button className='btn'>
