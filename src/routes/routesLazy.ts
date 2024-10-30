@@ -11,8 +11,8 @@ const Dashboard = React.lazy(() => import("../components/App/pages/Dashboard/Das
 // Rutas
 
 // Amounts
-const ListAmounts = React.lazy(() => import("../components/App/Modules/Clientes/ListAmounts/ListAmounts"));
-const CreateOrEditAmount = React.lazy(() => import("../components/App/Modules/Clientes/CreateOrEditAmount/CreateOrEditAmount"));
+const ListAmounts = React.lazy(() => import("../components/App/Modules/Amounts/ListAmounts/ListAmounts"));
+const CreateOrEditAmount = React.lazy(() => import("../components/App/Modules/Amounts/CreateOrEditAmount/CreateOrEditAmount"));
 
 // Categories
 const ListCategories = React.lazy(() => import("../components/App/pages/Categories/ListCategories"));
