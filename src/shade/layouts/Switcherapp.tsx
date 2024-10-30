@@ -1,12 +1,9 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import Footer from "../Footer/Footer";
-// import Switcher from "../Switcher/Switcher";
 import RightSidebar from "../RightSidebar/RightSidebar";
 import TabToTop from "../TabToTop/TabToTop";
-// import Switcher1 from "../../components/Pages/Switcher/Switcher-1/Switcher-1";
-import { Provider } from "react-redux";
-// import Store from "../../redux/store/store"
+
 export default function Switcherapp() {
   document
     .querySelector("body")
@@ -52,19 +49,15 @@ export default function Switcherapp() {
                     className="main-container container-fluid"
                     onClick={() => {
                       responsiveSidebarclose();
-                      //   Switcherdata.Horizontalmenudefultclose();
                     }}
                   >
-                    {/* <Switcher1 /> */}
                   </div>
                 </div>
               </div>
               <RightSidebar />
-              {/* <Switcher /> */}
               <Footer />
             </div>
           </div>
-        {/* </Provider>  */}
     </>
   );
 }

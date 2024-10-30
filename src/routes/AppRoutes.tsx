@@ -7,7 +7,6 @@ import "../index.scss";
 
 export const AppRoutes = () => {
   //const { user } = useSelector((store: any) => store.user);
-  console.log("PROCESS ENV:", process.env.PUBLIC_URL);
   const user = { token: true };
   
   return (

@@ -26,14 +26,10 @@ const CreateOrEditAmount = () => {
   const { postData, putData } = useFetch();
   const { data: categories  } = useFetch("categories");
 
-
-  const { handleChange, setUserProfiles, isPasswordTouched, setIsPasswordTouched, resetForm, setErrors, setHasErrors, errors, hasErrors } = useFormAmount(setData, data);
-
-  // const { handleSuccessAlert, handleErrorAlert, handleEditConfirmation } = useAlert();
+  const { handleChange, isPasswordTouched, setIsPasswordTouched, resetForm, setErrors, setHasErrors, errors, hasErrors } = useFormAmount(setData);
 
 
   useEffect(() => {
-    // Atualiza los perfiles en caso de haber un usuario (editar)
     setIsPasswordTouched(false);
     if (location?.state?.id != null) {
       setHasErrors(false);
@@ -45,9 +41,6 @@ const CreateOrEditAmount = () => {
     }
   }, [location]);
 
-  useEffect(() => {
-    console.log({categories, data})
-  }, [categories]);
 
   const handleSubmit = (e: any) => {
   e.preventDefault();

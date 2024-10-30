@@ -4,4 +4,3 @@ export * from "./ConfirmationCardButton";
 export * from "./InputErrorMessage";
 export * from "./Loader";
 export * from "./TitleComponent";
-export * from "./PDFViewer";
