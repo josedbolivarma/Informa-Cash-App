@@ -73,7 +73,7 @@ Consulte la sección sobre [implementación](https://facebook.github.io/create-r
 # Despliegue:
 
 - [Informa Cash Front](https://informa-cash-app.vercel.app/)
-- [Informa Cash Back](https://tita-pokedex-back-production.up.railway.app/)
+- [Informa Cash Back](https://informa-cash-back-production.up.railway.app/)
 
 ## Este proyecto ha sido construido con:
 
