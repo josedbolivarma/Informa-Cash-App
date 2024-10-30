@@ -1,6 +1,6 @@
-# 👋🏼 Hola! Bienvenido a Tita Pokedex.
+# 👋🏼 Hola! Bienvenido a Informa Cash App.
 
-<h3 align="center"><strong>Pokedex - Tita Media 💗</strong></h3>
+<h3 align="center"><strong>Informa Cash - PT Informa S.A 💗</strong></h3>
 
 El objetivo principal del aplicativo es que el usuario pueda realizar un seguimiento de sus gastos personales, agregar, editar, eliminar y ver el detalle de sus gastos en diferentes categorías.
 
