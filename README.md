@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# 👋🏼 Hola! Bienvenido a Tita Pokedex.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center"><strong>Pokedex - Tita Media 💗</strong></h3>
 
-## Available Scripts
+El objetivo principal del aplicativo es que el usuario pueda realizar un seguimiento de sus gastos personales, agregar, editar, eliminar y ver el detalle de sus gastos en diferentes categorías.
 
-In the project directory, you can run:
+# Estado del Proyecto:
 
-### `npm start`
+Este proyecto se encuentra terminado ✅, al día 30 de octubre del 2024. Este proyecto fue construido mediante el comando npx create-react-app y está en su versión ^18.2.0.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Este Repositorio en tu entorno
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Requisitos previos recomendados:
 
-### `npm test`
+-  Versión más reciente de Windows 10 (versión posterior a la 1903 y compilación posterior a la 18362) o Windows 11.
+-  Subsistema de Windows para Linux (WSL), incluida una distribución de Linux (como Ubuntu), y asegúrese de que se ejecuta en modo WSL 2. Para comprobarlo, abre PowerShell y escribe: wsl -l -v.
+-   Node.js en WSL 2.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Cómo clonar el Repositorio en Windows:
+
+- Copia la url del repositorio.
+- Abre cmd (ventana de comandos), y navega con cd a la carpeta en la que quieras clonar.
+- Utiliza el comando git clone y pega la url, presiona Enter.
+- También puedes usar git bash directamente.
+
+### Cómo clonar usando la terminal de Ubuntu:
+
+- Abre Git Bash.
+- Vaya al directorio actual donde desea que se agregue el directorio clonado.
+- utiliza la url de este repo ya copiada.
+- Haga clic en “Clonar o descargar” y copie la URL.
+
+# Url para Clone
+
+### https://github.com/josedbolivarma/Informa-Cash-App.git
+
+Esta es una aplicación React, puedes clonar el repositorio y utilizar el comando:
+
+```
+npm i
+```
+
+Para probar el proyecto de forma local, puedes correr:
+
+```
+npm start
+```
+Para correr las pruebas:
+
+```
+npm test
+```
+Inicia el corredor de prueba en el modo de reloj interactivo.\
+Consulte la sección sobre [ejecutar pruebas] (https://facebook.github.io/create-react-app/docs/running-tests) para obtener más información.
+Puedes correr la aplicación en modo desarrollo.\
+
+Abre [http://localhost:3000](http://localhost:3000) para ver en tu navegador.
+
+
+La página se recargará cuando realices cambios. Puedes ver errores en la consola.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Construye la aplicación para producción en la carpeta `build`.\
+Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La compilación se minimiza y los nombres de archivo incluyen los hashes.\
+¡Tu aplicación está lista para ser implementada!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Consulte la sección sobre [implementación](https://facebook.github.io/create-react-app/docs/deployment) para obtener más información.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Despliegue:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Informa Cash Front](https://informa-cash-app.vercel.app/)
+- [Informa Cash Back](https://tita-pokedex-back-production.up.railway.app/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Este proyecto ha sido construido con:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* [React](https://es.reactjs.org/) : ^18.3.8
 
-## Learn More
+### Algunos usos importantes del proyecto:
+react-bootstrap
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* [React-bootstrap](https://react-bootstrap.netlify.app/) : ^2.5.0
+* [TypeScript](https://www.typescriptlang.org/) : ^4.9.5
+* [react-router-dom](https://v5.reactrouter.com/web/guides/quick-start) : ^6.3.0
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+- [Jose David Bolivar Mayora](https://github.com/josedbolivarma) Desarrollador Frontend / FullStack. 
+
+![Imagen1](https://i.pinimg.com/736x/6a/44/92/6a44925897e4fc2fbdcc0d7a044ba2fc.jpg)
