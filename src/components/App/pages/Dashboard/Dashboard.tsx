@@ -10,19 +10,7 @@ const dataCards = [
     id: 1,
     name: 'Gastos',
     img: "https://img.freepik.com/vector-gratis/documentacion-electronica-hombre-registro-comprobando-registro-repositorio-aprobacion-linea-formulario-pantalla-pagina-validacion-cronicas-gastos-ilustracion-metafora-concepto-aislado_335657-1222.jpg",
-    url: `${process.env.PUBLIC_URL}/app/clientes`,
-  },
-  {
-    id: 2,
-    name: 'Gastos',
-    img: "https://img.freepik.com/vector-gratis/documentacion-electronica-hombre-registro-comprobando-registro-repositorio-aprobacion-linea-formulario-pantalla-pagina-validacion-cronicas-gastos-ilustracion-metafora-concepto-aislado_335657-1222.jpg",
-    url: `${process.env.PUBLIC_URL}/app/clientes`,
-  },
-  {
-    id: 3,
-    name: 'Gastos',
-    img: "https://img.freepik.com/vector-gratis/documentacion-electronica-hombre-registro-comprobando-registro-repositorio-aprobacion-linea-formulario-pantalla-pagina-validacion-cronicas-gastos-ilustracion-metafora-concepto-aislado_335657-1222.jpg",
-    url: `${process.env.PUBLIC_URL}/app/clientes`,
+    url: `${process.env.PUBLIC_URL}/app/gastos`,
   },
 ];
 
