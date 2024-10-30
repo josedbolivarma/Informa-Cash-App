@@ -43,7 +43,6 @@ const Sidebar = () => {
   }
   //<-------End---->
   function clearMenuActive() {
-    console.log('clear');
     MENUITEMS.map((mainlevel:any) => {
       if (mainlevel.Items) {
         mainlevel.Items.map((sublevel:any) => {

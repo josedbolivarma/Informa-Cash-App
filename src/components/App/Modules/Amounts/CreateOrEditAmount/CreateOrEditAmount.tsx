@@ -42,7 +42,6 @@ const CreateOrEditAmount = () => {
 
   const handleSubmit = (e: any) => {
   e.preventDefault();
-  console.log({data});
   if (data?.id) {
     putData(data?.id, data);
   } else {

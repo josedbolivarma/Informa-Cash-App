@@ -59,8 +59,6 @@ export const useFormAmount = (setAmount: any) => {
       setAmount((prev: any) => ({ ...prev, [e.target.name]: e.target.value }));
     }
 
-    console.log({value, validationErrors, hasErrors, errors});
-
     // Si hay errores, actualiza el estado con ellos
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);

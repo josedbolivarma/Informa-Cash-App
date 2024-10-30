@@ -19,7 +19,6 @@ export const useFetch = (url: string = "amounts") => {
       setIsLoading(true);
       const response = await fetch(`${BASE_URL}/${url}`);
       const data = await response.json();
-      console.log(data);
       
       setData(data);
       setIsLoading(false);

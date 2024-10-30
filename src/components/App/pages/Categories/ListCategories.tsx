@@ -56,17 +56,6 @@ const columns: any[] = [
   },
 ];
 
-  useEffect(() => {
-    console.log(data)
-    // const getData = async () => {
-    //   try {
-    //     const response: Response = await getAllData("api/cities/list");
-    //     setData(response);
-    //   } catch (error) {}
-    // };
-    // getData();
-  }, []);
-
   return (
     <div>
       {/* Breadcrumb */}

@@ -144,7 +144,6 @@ const ListAmounts = () => {
           } else {
             setFilterData(newData);
             const total = newData.reduce((prev, curr) => prev + curr.amount, 0);
-            console.log({total});
             setTotal(total);
           }
           

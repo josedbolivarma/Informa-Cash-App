@@ -39,14 +39,12 @@ export default function Header() {
   const open: any = Boolean(anchorEl);
   const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
-    console.log(open)
   };
 
   const [Data, setData] = React.useState([]);
 
   const { id } = useParams();
 
-  // console.log(getdata);
 
   const compare = () => {
     // let comparedata = getdata.map((e: any) => {
