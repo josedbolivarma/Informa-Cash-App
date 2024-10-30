@@ -27,8 +27,8 @@ const Dashboard = () => {
       <div className="grid-cards">
         <Row>
         {dataCards.map((item: any, index: number) => (
-          <Col sm={4}>
-            <Card key={item.id} className={`bd-0  mg-b-20 text-center shadow-drop-bottom-right`}> {/* {index} > 2 ? ` w-100` : `w-25 ` */}
+          <Col key={item.id} sm={4}>
+            <Card className={`bd-0  mg-b-20 text-center shadow-drop-bottom-right`}> {/* {index} > 2 ? ` w-100` : `w-25 ` */}
         <Card.Body className="br-5 bd bd-danger">
           <Link to={item.url} className="text-muted">
             <img src={item.img} className="w-100" alt="..." />
