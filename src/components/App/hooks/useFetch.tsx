@@ -5,7 +5,7 @@ import { Expense } from '../ui';
 
 
 
-const BASE_URL = "http://localhost:5000"
+const BASE_URL = "https://informa-cash-back-production.up.railway.app"
 
 export const useFetch = (url: string = "amounts") => {
     const [data, setData] = useState<any[]>([]);
